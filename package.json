@@ -1,0 +1,19 @@
+{
+  "name": "jm-project-starter",
+  "version": "1.0.0",
+  "description": "Starter files/folder for development projects. Uses MVC architecture & scss.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Jeffrey McLean",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  },
+  "dependencies": {
+    "core-js": "^3.38.1",
+    "regenerator-runtime": "^0.14.1"
+  }
+}
