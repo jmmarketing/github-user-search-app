@@ -12,10 +12,26 @@
     <script src="/index.e37f48ea.js" defer=""></script>
   </head>
   <body>
-    <nav class="nav__info-bar">devfinder Light Dark</nav>
+    <nav class="nav__info-bar">
+      <h1 class="nav__title">devfinder</h1>
+      <h4 class="nav__mode-text">Light Dark</h4>
+    </nav>
 
-    <div class="search-bar">Search GitHub username... Search</div>
+    <div class="search-bar">
+      <input class="search-bar__input" type="text">
+      <button class="search-bar__btn">Search</button>
+    </div>
 
-    <div class="result-card">Joined Repos Followers Following</div>
+    <div class="result-card">
+      <div class="result-card__left">
+        <div class="result-card__avatar" style="background-color: #0ff; border-radius: 50%; max-width: 117px; min-height: 117px"></div>
+      </div>
+      <div class="result-card__right">
+        <div class="result-card__dev-title"></div>
+        <div class="result-card__dev-about"></div>
+        <div class="result-card__dev-stats"></div>
+        <div class="result-card__dev-links"></div>
+      </div>
+    </div>
   </body>
 </html>
