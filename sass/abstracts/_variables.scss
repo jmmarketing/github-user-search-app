@@ -1,8 +1,8 @@
 // ######################
 // ## ROOT Variables ####
 // ######################
-:root {
-}
+// :root {
+// }
 
 // ######################
 // ## Font Variables ####
@@ -16,5 +16,22 @@ $default-font-size: 1.6rem;
 // ######################
 // ## Color Variables ###
 // ######################
-[data-theme="dark"] {
-}
+
+//lightmode
+$color-blue: #0079ff;
+$color-grey: #697c9a;
+$color-grey-blue: #4b6a9b;
+$color-grey-dark: #2b3442;
+$color-grey-light: #f6f8ff;
+$color-white: #fefefe;
+
+//darkmode
+$dm-color-blue: #0079ff;
+$dm-color-white: #fff;
+$dm-color-dark-blue: #1e2a47;
+$dm-color-blackish: #141d2f;
+
+//Note: will probably need to refactor above with root for darkmode feature. Just using to get styling going.
+
+// [data-theme="dark"] {
+// }
