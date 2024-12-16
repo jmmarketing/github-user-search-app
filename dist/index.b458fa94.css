@@ -30,6 +30,18 @@ h4, .header-quarternary {
   line-height: 2rem;
 }
 
+.error {
+  color: #f74646;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.not-active {
+  color: #4b6a9b;
+  font-weight: 400;
+  line-height: normal;
+}
+
 *, :before, :after {
   box-sizing: inherit;
   margin: 0;
