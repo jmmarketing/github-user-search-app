@@ -21,7 +21,7 @@
 160C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\core-js\modules\esnext.typed-array.to-spliced.js133786082871517122 0
 136C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\node-addon-api\nothing.c133786081775301054 0
 129C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\lmdb\util\when.js133786082528896019 0
-116C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\sass\main.css.map133788653661961708 0
+116C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\sass\main.css.map133788666293939919 0
 149C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\@swc\helpers\src\_super_prop_base.mjs133786082677049359 0
 142C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\core-js\full\typed-array\at.js133786082539909900 0
 109C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\.gitignore133747217142869317 0
@@ -92,7 +92,7 @@
 138C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\lightningcss\node\ast.d.ts133786082128071058 0
 153C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\core-js\actual\number\max-safe-integer.js133786082974696755 0
 145C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\svgo\plugins\removeUselessDefs.js133786082461083414 0
-103C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\dist133788653665772536 1
+103C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\dist133788665686500759 1
 161C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\caniuse-lite\data\features\css-read-only-write.js133786082636916764 0
 146C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\core-js\actual\typed-array\fill.js133786082877625182 0
 177C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\@parcel\optimizer-htmlnano\node_modules\css-select\lib\types.d.ts133786082226483212 0
@@ -225,7 +225,7 @@
 153C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\@parcel\optimizer-css\src\CSSOptimizer.js133786081855431931 0
 135C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\semver\ranges\subset.js133786082247884944 0
 145C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\mdn-data\css\syntaxes.schema.json133786082171086360 0
-125C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\sass\base\_typography.scss133786095093390357 0
+125C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\sass\base\_typography.scss133788665217207451 0
 150C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\core-js\internals\internal-metadata.js133786082946570704 0
 145C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\core-js\actual\number\to-fixed.js133786083055087316 0
 117C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\@lmdb133786083164177212 1
@@ -297,12 +297,12 @@
 140C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\core-js\full\array\filter.js133786082884385651 0
 147C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\source-map\dist\source-map.debug.js133786082147012873 0
 140C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\csso\lib\clean\WhiteSpace.js133786082481408286 0
-112C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\sass\main.css133788653661971681 0
+112C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\sass\main.css133788666293939919 0
 164C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\csso\node_modules\css-tree\lib\syntax\node\Number.js133786082633422354 0
 161C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\@parcel\source-map\parcel_sourcemap_node\build.rs133786082457064663 0
 130C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\core-js\full\error133786083082157642 1
 151C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\core-js\modules\es.reflect.construct.js133786082804201336 0
-113C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\sass\main.scss133747196396389970 0
+113C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\sass\main.scss133788666291348765 0
 156C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\@parcel\reporter-dev-server\src\HMRServer.js133786081919279898 0
 125C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\node-releases133786081930290788 1
 149C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\@parcel\core\src\SymbolPropagation.js133786082534335749 0
@@ -379,7 +379,7 @@
 142C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\@parcel\profiler\lib\Tracer.js133786081993436573 0
 142C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\domutils\lib\querying.d.ts.map133786082073510428 0
 116C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\@swc133786083164187198 1
-119C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\sass\base\_base.scss133747189261242177 0
+119C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\sass\base\_base.scss133788665681821852 0
 156C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\core-js\features\reflect\get-own-metadata.js133786082907245543 0
 166C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\caniuse-lite\data\features\css-indeterminate-pseudo.js133786082623945853 0
 164C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\@swc\helpers\_\_assert_this_initialized\package.json133786082003367879 0
@@ -9364,7 +9364,7 @@
 198C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\@parcel\core\test\fixtures\plugins\node_modules\parcel-transformer-no-engines\index.js133786082454367710 0
 199C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\@parcel\core\test\fixtures\plugins\node_modules\parcel-transformer-bad-engines\index.js133786082452904822 0
 155C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\@parcel\core\test\fixtures\parcel\yarn.lock133786082635409759 0
-126C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\dist\index.b458fa94.css.map133788653665732631 0
+126C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\dist\index.b458fa94.css.map133788665686464319 0
 160C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\@parcel\core\test\fixtures\main-mjs\package.json133786082633844467 0
 172C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\@parcel\core\test\fixtures\main-format-mismatch\package.json133786082633452273 0
 195C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\node_modules\@parcel\core\test\fixtures\local-plugin-config-pkg\node_modules\parcel-config-local133786082633372489 1
@@ -9561,4 +9561,4 @@
 130C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\dist\favicon-32x32.09fde066.png133788650313628854 0
 121C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\dist\index.e37f48ea.js133788650313628854 0
 125C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\dist\index.e37f48ea.js.map133788650313947975 0
-122C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\dist\index.b458fa94.css133788653665602980 0
+122C:\Users\jeffm\Desktop\Design -Development Education\Design\Frontend Mentor\Github-user-search-app\dist\index.b458fa94.css133788665686340393 0

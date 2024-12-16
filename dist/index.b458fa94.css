@@ -1,5 +1,6 @@
 @import "https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap";
 body {
+  color: #4b6a9b;
   font-family: Space Mono, monospace;
   font-size: 1.5rem;
   font-weight: normal;
@@ -7,12 +8,14 @@ body {
 }
 
 h1, .heading-primary {
+  color: #2b3442;
   font-size: 2.6rem;
   font-weight: bold;
   line-height: 3.8rem;
 }
 
 h2, .heading-secondary {
+  color: #2b3442;
   font-size: 2.2rem;
   font-weight: bold;
   line-height: 3.3rem;
@@ -54,6 +57,7 @@ html {
 
 body {
   box-sizing: border-box;
+  background-color: #f6f8ff;
   overflow-x: hidden;
 }
 /*# sourceMappingURL=index.b458fa94.css.map */

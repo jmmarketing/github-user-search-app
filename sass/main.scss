@@ -10,7 +10,10 @@
 @import "base/base";
 
 //Components
-// ** IMPORT AS NEEDED **
+
+@import "components/infobar";
+@import "components/resultCard";
+@import "components/searchbar";
 
 //Layouts
 @import "layouts/navigation";
