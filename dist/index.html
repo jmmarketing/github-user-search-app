@@ -18,7 +18,7 @@
     </nav>
 
     <div class="search-bar">
-      <input class="search-bar__input" type="text">
+      <input class="search-bar__input" type="text" placeholder="Search Github username...">
       <button class="search-bar__btn">Search</button>
     </div>
 
@@ -27,10 +27,41 @@
         <div class="result-card__avatar" style="background-color: #0ff; border-radius: 50%; max-width: 117px; min-height: 117px"></div>
       </div>
       <div class="result-card__right">
-        <div class="result-card__dev-title"></div>
-        <div class="result-card__dev-about"></div>
-        <div class="result-card__dev-stats"></div>
-        <div class="result-card__dev-links"></div>
+        <div class="result-card__dev-title">
+          <div class="result-card__dev-title--name">
+            <h1>The Octocat</h1>
+            <p>@octocat</p>
+          </div>
+          <div class="result-card__dev-title--date">Joined 25 Jane 2011</div>
+        </div>
+        <div class="result-card__dev-about">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
+          Quisque volutpat mattis eros.
+        </div>
+        <div class="result-card__dev-stats">
+          <div class="result-card__dev-stats-group">
+            <h4 class="result-card__dev-stats--title">Repos</h4>
+            <h2 class="result-card__dev-stats--number">8</h2>
+          </div>
+          <div class="result-card__dev-stats-group">
+            <h4 class="result-card__dev-stats--title">Repos</h4>
+            <h2 class="result-card__dev-stats--number">8</h2>
+          </div>
+          <div class="result-card__dev-stats-group">
+            <h4 class="result-card__dev-stats--title">Repos</h4>
+            <h2 class="result-card__dev-stats--number">8</h2>
+          </div>
+        </div>
+        <div class="result-card__dev-links">
+          <div class="result-card__dev-links--left">
+            <p class="result-card__dev-links--location">San Francisco</p>
+            <p class="result-card__dev-links--site">https://github.blog</p>
+          </div>
+          <div class="result-card__dev-links--right">
+            <p class="result-card__dev-links--twitter">Not Available</p>
+            <p class="result-card__dev-links--github">@github</p>
+          </div>
+        </div>
       </div>
     </div>
   </body>
