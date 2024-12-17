@@ -1,0 +1,11 @@
+.search-bar {
+  &::before {
+    content: url(../assets/icon-search.svg);
+  }
+
+  &__input {
+  }
+
+  &__btn {
+  }
+}

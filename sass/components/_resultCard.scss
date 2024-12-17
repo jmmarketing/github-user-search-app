@@ -1,0 +1,63 @@
+.result-card {
+  &__left {
+  }
+  &__right {
+  }
+
+  // Does it make more sense to break Left/right up into own groupings instead of nested.
+
+  &__avatar {
+  }
+
+  &__dev-title {
+    &--name {
+    }
+
+    &--date {
+    }
+  }
+
+  &__dev-about {
+  }
+}
+
+.result-card__dev-stats {
+  &-group {
+  }
+  &--title {
+  }
+  &--number {
+  }
+}
+
+.result-card__dev-links {
+  &--left {
+  }
+  &--location {
+    &::before {
+      content: url(../assets/icon-location.svg);
+      margin-right: 20px;
+    }
+  }
+  &--site {
+    &::before {
+      content: url(../assets/icon-website.svg);
+      margin-right: 20px;
+    }
+  }
+
+  &--right {
+  }
+  &--twitter {
+    &::before {
+      content: url(../assets/icon-twitter.svg);
+      margin-right: 20px;
+    }
+  }
+  &--github {
+    &::before {
+      content: url(../assets/icon-company.svg);
+      margin-right: 20px;
+    }
+  }
+}

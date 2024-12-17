@@ -58,6 +58,33 @@ html {
 body {
   box-sizing: border-box;
   background-color: #f6f8ff;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
   overflow-x: hidden;
+}
+
+.result-card__dev-links--location:before {
+  content: url("icon-location.44b81a36.svg");
+  margin-right: 20px;
+}
+
+.result-card__dev-links--site:before {
+  content: url("icon-website.d6a79a90.svg");
+  margin-right: 20px;
+}
+
+.result-card__dev-links--twitter:before {
+  content: url("icon-twitter.56f66b6d.svg");
+  margin-right: 20px;
+}
+
+.result-card__dev-links--github:before {
+  content: url("icon-company.84aecab0.svg");
+  margin-right: 20px;
+}
+
+.search-bar:before {
+  content: url("icon-search.020bebc5.svg");
 }
 /*# sourceMappingURL=index.b458fa94.css.map */

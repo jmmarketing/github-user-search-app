@@ -85,4 +85,28 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
   background-color: #f6f8ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.result-card__dev-links--location::before {
+  content: url(../assets/icon-location.svg);
+  margin-right: 20px;
+}
+.result-card__dev-links--site::before {
+  content: url(../assets/icon-website.svg);
+  margin-right: 20px;
+}
+.result-card__dev-links--twitter::before {
+  content: url(../assets/icon-twitter.svg);
+  margin-right: 20px;
+}
+.result-card__dev-links--github::before {
+  content: url(../assets/icon-company.svg);
+  margin-right: 20px;
+}
+
+.search-bar::before {
+  content: url(../assets/icon-search.svg);
 }/*# sourceMappingURL=main.css.map */
