@@ -64,6 +64,30 @@ body {
   overflow-x: hidden;
 }
 
+.nav__info-bar {
+  gap: 524px;
+  margin-bottom: 36px;
+  display: flex;
+}
+
+.nav__toggle {
+  align-items: center;
+  gap: 16px;
+  display: flex;
+}
+
+.nav__toggle--mode {
+  text-transform: uppercase;
+  color: #697c9a;
+  letter-spacing: 2.5px;
+  font-weight: 700;
+}
+
+.nav__toggle--icon {
+  width: 20px;
+  height: 20px;
+}
+
 .result-card__dev-links--location:before {
   content: url("icon-location.44b81a36.svg");
   margin-right: 20px;

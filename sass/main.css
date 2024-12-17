@@ -90,6 +90,27 @@ body {
   align-items: center;
 }
 
+.nav__info-bar {
+  display: flex;
+  gap: 524px;
+  margin-bottom: 36px;
+}
+.nav__toggle {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.nav__toggle--mode {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #697c9a;
+  letter-spacing: 2.5px;
+}
+.nav__toggle--icon {
+  width: 20px;
+  height: 20px;
+}
+
 .result-card__dev-links--location::before {
   content: url(../assets/icon-location.svg);
   margin-right: 20px;

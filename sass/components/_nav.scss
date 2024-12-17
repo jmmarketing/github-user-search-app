@@ -1,7 +1,25 @@
 .nav {
   &__info-bar {
+    display: flex;
+    gap: 524px;
+    margin-bottom: 36px;
   }
 
-  &__mode-text {
+  &__toggle {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
+    &--mode {
+      text-transform: uppercase;
+      font-weight: 700;
+      color: $color-grey;
+      letter-spacing: 2.5px;
+    }
+
+    &--icon {
+      width: 20px;
+      height: 20px;
+    }
   }
 }
