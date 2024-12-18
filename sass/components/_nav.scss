@@ -2,13 +2,20 @@
   &__info-bar {
     display: flex;
     gap: 524px;
-    margin-bottom: 36px;
   }
 
   &__toggle {
     display: flex;
     gap: 16px;
     align-items: center;
+
+    cursor: pointer;
+
+    &:hover &--mode,
+    &:hover &--icon {
+      color: #222731;
+      fill: #222731;
+    }
 
     &--mode {
       text-transform: uppercase;
@@ -20,6 +27,7 @@
     &--icon {
       width: 20px;
       height: 20px;
+      fill: $color-grey;
     }
   }
 }
