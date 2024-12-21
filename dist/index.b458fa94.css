@@ -95,6 +95,21 @@ body {
   height: 20px;
 }
 
+.result-card {
+  background-color: #fefefe;
+  border-radius: 15px;
+  gap: 40px;
+  width: 730px;
+  padding: 48px;
+  display: flex;
+  box-shadow: 0 16px 30px -10px #4660bb33;
+}
+
+.result-card__avatar {
+  width: 117px;
+  height: 117px;
+}
+
 .result-card__dev-links--location:before {
   content: url("icon-location.44b81a36.svg");
   margin-right: 20px;
