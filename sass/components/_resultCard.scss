@@ -23,51 +23,98 @@
   }
 
   &__dev-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
     &--name {
+      p {
+        color: $color-blue;
+      }
     }
 
     &--date {
+      line-height: normal;
+      color: $color-grey;
     }
   }
 
   &__dev-about {
+    margin-bottom: 32px;
   }
 }
 
 .result-card__dev-stats {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: #f6f8ff;
+  border-radius: 10px;
+  padding: 15px 32px;
+
+  margin-bottom: 37px;
+
   &-group {
   }
   &--title {
+    line-height: normal;
   }
   &--number {
+    line-height: normal;
   }
 }
 
 .result-card__dev-links {
+  display: flex;
+
+  gap: 62px;
+
   &--left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
   &--location {
+    display: flex;
+
     &::before {
       content: url(../assets/icon-location.svg);
-      margin-right: 20px;
+      margin-right: 24px;
     }
   }
   &--site {
+    text-decoration: none;
+    display: flex;
+
     &::before {
       content: url(../assets/icon-website.svg);
       margin-right: 20px;
     }
+
+    &:hover {
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-skip-ink: none;
+      text-decoration-thickness: auto;
+      text-underline-offset: auto;
+      text-underline-position: from-font;
+    }
   }
 
   &--right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
   &--twitter {
+    display: flex;
     &::before {
       content: url(../assets/icon-twitter.svg);
       margin-right: 20px;
     }
   }
   &--github {
+    display: flex;
     &::before {
       content: url(../assets/icon-company.svg);
       margin-right: 20px;

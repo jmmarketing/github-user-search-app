@@ -1,5 +1,5 @@
 @import "https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap";
-body, a {
+body {
   color: #4b6a9b;
   font-family: Space Mono, monospace;
   font-size: 1.5rem;
@@ -33,10 +33,6 @@ h4, .header-quarternary {
   line-height: 2rem;
 }
 
-p {
-  line-height: normal;
-}
-
 .error {
   color: #f74646;
   font-size: 1.5rem;
@@ -45,8 +41,7 @@ p {
 }
 
 .not-active {
-  color: #a5b4cc;
-  fill: #a5b4cc;
+  color: #4b6a9b;
   font-weight: 400;
   line-height: normal;
 }
@@ -152,24 +147,9 @@ body {
   display: flex;
 }
 
-.result-card__dev-links--left {
-  flex-direction: column;
-  gap: 20px;
-  display: flex;
-}
-
-.result-card__dev-links--location {
-  display: flex;
-}
-
 .result-card__dev-links--location:before {
   content: url("icon-location.44b81a36.svg");
-  margin-right: 24px;
-}
-
-.result-card__dev-links--site {
-  text-decoration: none;
-  display: flex;
+  margin-right: 20px;
 }
 
 .result-card__dev-links--site:before {
@@ -177,32 +157,9 @@ body {
   margin-right: 20px;
 }
 
-.result-card__dev-links--site:hover {
-  text-decoration-skip-ink: none;
-  text-underline-offset: auto;
-  text-underline-position: from-font;
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-  text-decoration-thickness: auto;
-}
-
-.result-card__dev-links--right {
-  flex-direction: column;
-  gap: 20px;
-  display: flex;
-}
-
-.result-card__dev-links--twitter {
-  display: flex;
-}
-
 .result-card__dev-links--twitter:before {
   content: url("icon-twitter.56f66b6d.svg");
   margin-right: 20px;
-}
-
-.result-card__dev-links--github {
-  display: flex;
 }
 
 .result-card__dev-links--github:before {
