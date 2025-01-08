@@ -8,13 +8,24 @@
 
   padding: 48px;
 
-  @include clamp-width;
+  width: 730px;
+  @include respond(tablet) {
+    width: 573px;
+    padding: 40px;
+  }
+  @include respond(phone) {
+    width: 327px;
+  }
 
   //   &__left {
   //   }
 
   &__info {
     padding-left: 154px;
+
+    @include respond(tablet) {
+      padding-left: 0;
+    }
   }
 
   // Does it make more sense to break Left/right up into own groupings instead of nested.
@@ -28,12 +39,21 @@
 
   &__dev-title {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 20px;
+
+    @include respond(tablet) {
+      padding: 12px 0 12px 158px;
+      margin-bottom: 26px;
+    }
+    @include respond(phone) {
+    }
 
     &--name {
       p {
         color: $color-blue;
+        font-size: $default-font-size;
       }
     }
 
@@ -45,6 +65,7 @@
 
   &__dev-about {
     margin-bottom: 32px;
+    line-height: 2.5rem;
   }
 }
 

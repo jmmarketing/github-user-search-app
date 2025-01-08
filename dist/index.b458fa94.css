@@ -68,14 +68,27 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  padding: 10px;
   display: flex;
   overflow-x: hidden;
 }
 
 .nav__info-bar {
   justify-content: space-between;
-  width: clamp(327px, 75vw, 730px);
+  width: 730px;
   display: flex;
+}
+
+@media only screen and (width <= 48em) {
+  .nav__info-bar {
+    width: 573px;
+  }
+}
+
+@media only screen and (width <= 23.5em) {
+  .nav__info-bar {
+    width: 327px;
+  }
 }
 
 .nav__toggle {
@@ -107,13 +120,32 @@ body {
   background-color: #fefefe;
   border-radius: 15px;
   gap: 40px;
-  width: clamp(327px, 75vw, 730px);
+  width: 730px;
   padding: 48px;
   box-shadow: 0 16px 30px -10px #4660bb33;
 }
 
+@media only screen and (width <= 48em) {
+  .result-card {
+    width: 573px;
+    padding: 40px;
+  }
+}
+
+@media only screen and (width <= 23.5em) {
+  .result-card {
+    width: 327px;
+  }
+}
+
 .result-card__info {
   padding-left: 154px;
+}
+
+@media only screen and (width <= 48em) {
+  .result-card__info {
+    padding-left: 0;
+  }
 }
 
 .result-card__avatar {
@@ -123,13 +155,22 @@ body {
 }
 
 .result-card__dev-title {
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 20px;
   display: flex;
 }
 
+@media only screen and (width <= 48em) {
+  .result-card__dev-title {
+    margin-bottom: 26px;
+    padding: 12px 0 12px 158px;
+  }
+}
+
 .result-card__dev-title--name p {
   color: #0079ff;
+  font-size: 1.6rem;
 }
 
 .result-card__dev-title--date {
@@ -139,6 +180,7 @@ body {
 
 .result-card__dev-about {
   margin-bottom: 32px;
+  line-height: 2.5rem;
 }
 
 .result-card__dev-stats {
@@ -222,13 +264,25 @@ body {
   background-color: #fefefe;
   border-radius: 15px;
   align-items: center;
-  width: clamp(327px, 75vw, 730px);
+  width: 730px;
   height: 70px;
   margin: 36px 0 24px;
   padding: 10px;
   display: flex;
   position: relative;
   box-shadow: 0 16px 30px -10px #4660bb33;
+}
+
+@media only screen and (width <= 48em) {
+  .search-bar {
+    width: 573px;
+  }
+}
+
+@media only screen and (width <= 23.5em) {
+  .search-bar {
+    width: 327px;
+  }
 }
 
 .search-bar:before {

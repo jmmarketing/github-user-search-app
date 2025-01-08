@@ -2,7 +2,14 @@
   &__info-bar {
     display: flex;
     justify-content: space-between;
-    @include clamp-width;
+    width: 730px;
+
+    @include respond(tablet) {
+      width: 573px;
+    }
+    @include respond(phone) {
+      width: 327px;
+    }
   }
 
   &__toggle {

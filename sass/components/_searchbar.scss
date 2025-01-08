@@ -1,6 +1,6 @@
 .search-bar {
   background-color: $color-white;
-  @include clamp-width;
+  width: 730px;
   height: 70px;
 
   padding: 10px;
@@ -19,6 +19,13 @@
   position: relative;
 
   cursor: pointer;
+
+  @include respond(tablet) {
+    width: 573px;
+  }
+  @include respond(phone) {
+    width: 327px;
+  }
 
   &::before {
     content: url(../assets/icon-search.svg);
