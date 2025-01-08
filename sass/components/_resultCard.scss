@@ -1,5 +1,5 @@
 .result-card {
-  display: flex;
+  //   display: flex;
   gap: 40px;
 
   border-radius: 15px;
@@ -10,9 +10,11 @@
 
   width: 730px;
 
-  &__left {
-  }
-  &__right {
+  //   &__left {
+  //   }
+
+  &__info {
+    padding-left: 154px;
   }
 
   // Does it make more sense to break Left/right up into own groupings instead of nested.
@@ -20,6 +22,8 @@
   &__avatar {
     height: 117px;
     width: 117px;
+
+    position: absolute;
   }
 
   &__dev-title {

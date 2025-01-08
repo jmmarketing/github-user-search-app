@@ -124,7 +124,6 @@ body {
 }
 
 .result-card {
-  display: flex;
   gap: 40px;
   border-radius: 15px;
   background-color: #fefefe;
@@ -132,9 +131,13 @@ body {
   padding: 48px;
   width: 730px;
 }
+.result-card__info {
+  padding-left: 154px;
+}
 .result-card__avatar {
   height: 117px;
   width: 117px;
+  position: absolute;
 }
 .result-card__dev-title {
   display: flex;
