@@ -1,7 +1,8 @@
 .nav {
   &__info-bar {
     display: flex;
-    gap: 524px;
+    justify-content: space-between;
+    @include clamp-width;
   }
 
   &__toggle {

@@ -95,11 +95,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .nav__info-bar {
   display: flex;
-  gap: 524px;
+  justify-content: space-between;
+  width: clamp(327px, 75vw, 730px);
 }
 .nav__toggle {
   display: flex;
@@ -129,7 +132,7 @@ body {
   background-color: #fefefe;
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
   padding: 48px;
-  width: 730px;
+  width: clamp(327px, 75vw, 730px);
 }
 .result-card__info {
   padding-left: 154px;
@@ -225,7 +228,7 @@ body {
 
 .search-bar {
   background-color: #fefefe;
-  width: 730px;
+  width: clamp(327px, 75vw, 730px);
   height: 70px;
   padding: 10px;
   margin: 36px 0 24px;

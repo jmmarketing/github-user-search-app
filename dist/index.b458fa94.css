@@ -65,13 +65,16 @@ body {
   box-sizing: border-box;
   background-color: #f6f8ff;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  height: 100vh;
   display: flex;
   overflow-x: hidden;
 }
 
 .nav__info-bar {
-  gap: 524px;
+  justify-content: space-between;
+  width: clamp(327px, 75vw, 730px);
   display: flex;
 }
 
@@ -104,7 +107,7 @@ body {
   background-color: #fefefe;
   border-radius: 15px;
   gap: 40px;
-  width: 730px;
+  width: clamp(327px, 75vw, 730px);
   padding: 48px;
   box-shadow: 0 16px 30px -10px #4660bb33;
 }
@@ -219,7 +222,7 @@ body {
   background-color: #fefefe;
   border-radius: 15px;
   align-items: center;
-  width: 730px;
+  width: clamp(327px, 75vw, 730px);
   height: 70px;
   margin: 36px 0 24px;
   padding: 10px;

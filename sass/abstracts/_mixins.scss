@@ -38,3 +38,7 @@ ORDER [When refactoring for responsiveness]: Base + typography > general layout 
   @if $breakpoint == big-desktop {
   }
 }
+
+@mixin clamp-width {
+  width: clamp(327px, 75vw, 730px);
+}

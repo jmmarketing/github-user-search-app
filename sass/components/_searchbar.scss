@@ -1,6 +1,6 @@
 .search-bar {
   background-color: $color-white;
-  width: 730px;
+  @include clamp-width;
   height: 70px;
 
   padding: 10px;
