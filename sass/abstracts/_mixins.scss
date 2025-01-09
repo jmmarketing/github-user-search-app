@@ -22,8 +22,8 @@ ORDER [When refactoring for responsiveness]: Base + typography > general layout 
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
-    @media only screen and (max-width: 23.5em) {
-      //376px
+    @media only screen and (max-width: 37.5em) {
+      //600px
       // width: 327px;
       @content;
     }
@@ -32,7 +32,7 @@ ORDER [When refactoring for responsiveness]: Base + typography > general layout 
   @if $breakpoint == tablet {
     @media only screen and (max-width: 48em) {
       //768px
-      // width: 537px;
+      // width: 573px;
       @content;
     }
   }

@@ -15,6 +15,7 @@
   }
   @include respond(phone) {
     width: 327px;
+    padding: 24px;
   }
 
   //   &__left {
@@ -35,6 +36,12 @@
     width: 117px;
 
     position: absolute;
+
+    @include respond(phone) {
+      height: 70px;
+      width: 70px;
+      margin-top: 8px;
+    }
   }
 
   &__dev-title {
@@ -48,6 +55,7 @@
       margin-bottom: 26px;
     }
     @include respond(phone) {
+      padding: 9px 0 9px 90px;
     }
 
     &--name {
