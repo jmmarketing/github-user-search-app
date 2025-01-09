@@ -26,6 +26,12 @@ a {
   font-weight: normal;
   color: #4b6a9b;
 }
+@media only screen and (max-width: 37.5em) {
+  body,
+  a {
+    font-size: 1.3rem;
+  }
+}
 
 h1,
 .heading-primary {
@@ -261,12 +267,24 @@ body {
 
 .result-card__dev-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 62px;
+}
+@media only screen and (max-width: 37.5em) {
+  .result-card__dev-links {
+    gap: 17px;
+    font-size: 1.3rem;
+  }
 }
 .result-card__dev-links--left {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+@media only screen and (max-width: 37.5em) {
+  .result-card__dev-links--left {
+    gap: 17px;
+  }
 }
 .result-card__dev-links--location {
   display: flex;
@@ -296,6 +314,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+@media only screen and (max-width: 37.5em) {
+  .result-card__dev-links--right {
+    gap: 17px;
+  }
 }
 .result-card__dev-links--twitter {
   display: flex;

@@ -7,6 +7,10 @@ a {
   line-height: 2.5rem;
   font-weight: normal;
   color: $color-grey-blue;
+
+  @include respond(phone) {
+    font-size: 1.3rem;
+  }
 }
 
 h1,

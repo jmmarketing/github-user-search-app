@@ -7,6 +7,12 @@ body, a {
   line-height: 2.5rem;
 }
 
+@media only screen and (width <= 37.5em) {
+  body, a {
+    font-size: 1.3rem;
+  }
+}
+
 h1, .heading-primary {
   color: #2b3442;
   font-size: 2.6rem;
@@ -257,14 +263,28 @@ body {
 }
 
 .result-card__dev-links {
+  flex-wrap: wrap;
   gap: 62px;
   display: flex;
+}
+
+@media only screen and (width <= 37.5em) {
+  .result-card__dev-links {
+    gap: 17px;
+    font-size: 1.3rem;
+  }
 }
 
 .result-card__dev-links--left {
   flex-direction: column;
   gap: 20px;
   display: flex;
+}
+
+@media only screen and (width <= 37.5em) {
+  .result-card__dev-links--left {
+    gap: 17px;
+  }
 }
 
 .result-card__dev-links--location {
@@ -299,6 +319,12 @@ body {
   flex-direction: column;
   gap: 20px;
   display: flex;
+}
+
+@media only screen and (width <= 37.5em) {
+  .result-card__dev-links--right {
+    gap: 17px;
+  }
 }
 
 .result-card__dev-links--twitter {

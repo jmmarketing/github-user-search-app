@@ -131,13 +131,22 @@
 
 .result-card__dev-links {
   display: flex;
-
+  flex-wrap: wrap;
   gap: 62px;
+
+  @include respond(phone) {
+    gap: 17px;
+    font-size: 1.3rem;
+  }
 
   &--left {
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @include respond(phone) {
+      gap: 17px;
+    }
   }
   &--location {
     display: flex;
@@ -170,6 +179,10 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @include respond(phone) {
+      gap: 17px;
+    }
   }
   &--twitter {
     display: flex;
