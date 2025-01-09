@@ -244,8 +244,19 @@ body {
 .result-card__dev-stats--title {
   line-height: normal;
 }
+@media only screen and (max-width: 37.5em) {
+  .result-card__dev-stats--title {
+    font-size: 1.1rem;
+  }
+}
 .result-card__dev-stats--number {
   line-height: normal;
+}
+@media only screen and (max-width: 37.5em) {
+  .result-card__dev-stats--number {
+    font-size: 1.6rem;
+    text-align: center;
+  }
 }
 
 .result-card__dev-links {

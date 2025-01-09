@@ -235,8 +235,25 @@ body {
   display: flex;
 }
 
-.result-card__dev-stats--title, .result-card__dev-stats--number {
+.result-card__dev-stats--title {
   line-height: normal;
+}
+
+@media only screen and (width <= 37.5em) {
+  .result-card__dev-stats--title {
+    font-size: 1.1rem;
+  }
+}
+
+.result-card__dev-stats--number {
+  line-height: normal;
+}
+
+@media only screen and (width <= 37.5em) {
+  .result-card__dev-stats--number {
+    text-align: center;
+    font-size: 1.6rem;
+  }
 }
 
 .result-card__dev-links {

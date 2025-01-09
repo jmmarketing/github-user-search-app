@@ -116,9 +116,16 @@
   }
   &--title {
     line-height: normal;
+    @include respond(phone) {
+      font-size: 1.1rem;
+    }
   }
   &--number {
     line-height: normal;
+    @include respond(phone) {
+      font-size: $default-font-size;
+      text-align: center;
+    }
   }
 }
 
