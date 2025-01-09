@@ -76,6 +76,7 @@ body {
 .nav__info-bar {
   justify-content: space-between;
   width: 730px;
+  transition: width .3s ease-in;
   display: flex;
 }
 
@@ -122,6 +123,7 @@ body {
   gap: 40px;
   width: 730px;
   padding: 48px;
+  transition: width .3s ease-in;
   box-shadow: 0 16px 30px -10px #4660bb33;
 }
 
@@ -152,6 +154,7 @@ body {
 .result-card__avatar {
   width: 117px;
   height: 117px;
+  transition: all .5s ease-out;
   position: absolute;
 }
 
@@ -179,7 +182,13 @@ body {
 
 @media only screen and (width <= 37.5em) {
   .result-card__dev-title {
+    margin-bottom: 34px;
     padding: 9px 0 9px 90px;
+  }
+
+  .result-card__dev-title--name h1 {
+    font-size: 1.6rem;
+    line-height: normal;
   }
 }
 
@@ -188,14 +197,33 @@ body {
   font-size: 1.6rem;
 }
 
+@media only screen and (width <= 37.5em) {
+  .result-card__dev-title--name p {
+    font-size: 1.3rem;
+  }
+}
+
 .result-card__dev-title--date {
   color: #697c9a;
   line-height: normal;
 }
 
+@media only screen and (width <= 37.5em) {
+  .result-card__dev-title--date {
+    font-size: 1.3rem;
+  }
+}
+
 .result-card__dev-about {
   margin-bottom: 32px;
   line-height: 2.5rem;
+}
+
+@media only screen and (width <= 37.5em) {
+  .result-card__dev-about {
+    margin-bottom: 23px;
+    font-size: 1.3rem;
+  }
 }
 
 .result-card__dev-stats {
@@ -283,6 +311,7 @@ body {
   height: 70px;
   margin: 36px 0 24px;
   padding: 10px;
+  transition: width .3s ease-in;
   display: flex;
   position: relative;
   box-shadow: 0 16px 30px -10px #4660bb33;

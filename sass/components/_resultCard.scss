@@ -9,6 +9,8 @@
   padding: 48px;
 
   width: 730px;
+  transition: $transition-width;
+
   @include respond(tablet) {
     width: 573px;
     padding: 40px;
@@ -37,6 +39,8 @@
 
     position: absolute;
 
+    transition: all 0.5s ease-out;
+
     @include respond(phone) {
       height: 70px;
       width: 70px;
@@ -56,24 +60,45 @@
     }
     @include respond(phone) {
       padding: 9px 0 9px 90px;
+      margin-bottom: 34px;
     }
 
     &--name {
+      h1 {
+        @include respond(phone) {
+          line-height: normal;
+          font-size: $default-font-size;
+        }
+      }
+
       p {
         color: $color-blue;
         font-size: $default-font-size;
+
+        @include respond(phone) {
+          font-size: 1.3rem;
+        }
       }
     }
 
     &--date {
       line-height: normal;
       color: $color-grey;
+
+      @include respond(phone) {
+        font-size: 1.3rem;
+      }
     }
   }
 
   &__dev-about {
     margin-bottom: 32px;
     line-height: 2.5rem;
+
+    @include respond(phone) {
+      font-size: 1.3rem;
+      margin-bottom: 23px;
+    }
   }
 }
 
