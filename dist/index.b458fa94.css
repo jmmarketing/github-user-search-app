@@ -369,12 +369,22 @@ body {
 @media only screen and (width <= 37.5em) {
   .search-bar {
     width: 327px;
+    height: 60px;
+    margin-bottom: 16px;
+    padding: 7px;
   }
 }
 
 .search-bar:before {
   content: url("icon-search.020bebc5.svg");
   margin: 0 22px;
+}
+
+@media only screen and (width <= 37.5em) {
+  .search-bar:before {
+    margin: 0 9px;
+    transform: scale(.83);
+  }
 }
 
 .search-bar__input {

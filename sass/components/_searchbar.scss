@@ -26,11 +26,19 @@
   }
   @include respond(phone) {
     width: 327px;
+    height: 60px;
+    margin-bottom: 16px;
+    padding: 7px;
   }
 
   &::before {
     content: url(../assets/icon-search.svg);
     margin: 0 22px;
+
+    @include respond(phone) {
+      margin: 0 9px;
+      transform: scale(0.83);
+    }
   }
 
   &__input {
