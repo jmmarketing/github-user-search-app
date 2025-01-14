@@ -292,6 +292,7 @@ body {
 .result-card__dev-links--location::before {
   content: url(../assets/icon-location.svg);
   margin-right: 24px;
+  height: 20px;
 }
 .result-card__dev-links--site {
   text-decoration: none;
@@ -300,6 +301,7 @@ body {
 .result-card__dev-links--site::before {
   content: url(../assets/icon-website.svg);
   margin-right: 20px;
+  height: 20px;
 }
 .result-card__dev-links--site:hover {
   text-decoration-line: underline;
@@ -326,13 +328,20 @@ body {
 .result-card__dev-links--twitter::before {
   content: url(../assets/icon-twitter.svg);
   margin-right: 20px;
+  height: 20px;
 }
 .result-card__dev-links--github {
   display: flex;
 }
+@media only screen and (max-width: 37.5em) {
+  .result-card__dev-links--github {
+    padding-bottom: 25px;
+  }
+}
 .result-card__dev-links--github::before {
   content: url(../assets/icon-company.svg);
   margin-right: 20px;
+  height: 20px;
 }
 
 .search-bar {

@@ -293,6 +293,7 @@ body {
 
 .result-card__dev-links--location:before {
   content: url("icon-location.44b81a36.svg");
+  height: 20px;
   margin-right: 24px;
 }
 
@@ -303,6 +304,7 @@ body {
 
 .result-card__dev-links--site:before {
   content: url("icon-website.d6a79a90.svg");
+  height: 20px;
   margin-right: 20px;
 }
 
@@ -333,6 +335,7 @@ body {
 
 .result-card__dev-links--twitter:before {
   content: url("icon-twitter.56f66b6d.svg");
+  height: 20px;
   margin-right: 20px;
 }
 
@@ -340,8 +343,15 @@ body {
   display: flex;
 }
 
+@media only screen and (width <= 37.5em) {
+  .result-card__dev-links--github {
+    padding-bottom: 25px;
+  }
+}
+
 .result-card__dev-links--github:before {
   content: url("icon-company.84aecab0.svg");
+  height: 20px;
   margin-right: 20px;
 }
 

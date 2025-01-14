@@ -154,6 +154,7 @@
     &::before {
       content: url(../assets/icon-location.svg);
       margin-right: 24px;
+      height: 20px;
     }
   }
   &--site {
@@ -163,6 +164,7 @@
     &::before {
       content: url(../assets/icon-website.svg);
       margin-right: 20px;
+      height: 20px;
     }
 
     &:hover {
@@ -189,13 +191,19 @@
     &::before {
       content: url(../assets/icon-twitter.svg);
       margin-right: 20px;
+      height: 20px;
     }
   }
   &--github {
     display: flex;
+
+    @include respond(phone) {
+      padding-bottom: 25px;
+    }
     &::before {
       content: url(../assets/icon-company.svg);
       margin-right: 20px;
+      height: 20px;
     }
   }
 }
