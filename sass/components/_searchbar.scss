@@ -54,10 +54,30 @@
       outline: none;
       color: #222731;
     }
+
+    @include respond(phone) {
+      font-size: 1.3rem;
+      max-width: 184px;
+      padding-right: 7px;
+    }
   }
 
   &__alert {
     margin: 0 24px;
+    position: absolute;
+    right: 140px;
+
+    display: none;
+
+    @include respond(tablet) {
+      right: 100px;
+    }
+
+    @include respond(phone) {
+      font-size: 1.3rem;
+      top: -20px;
+      left: 0;
+    }
   }
   &__btn {
     background-color: $color-blue;
@@ -65,7 +85,7 @@
     border-style: none;
 
     font-family: "Space Mono", monospace;
-    font-size: 1.6rem;
+    font-size: $default-font-size;
     font-weight: 700;
     color: #fff;
 
@@ -75,10 +95,17 @@
     position: absolute;
     right: 10px;
 
+    cursor: pointer;
+
     &:hover {
       background-color: #60abff;
     }
 
-    cursor: pointer;
+    @include respond(phone) {
+      width: 84px;
+      height: 46px;
+
+      font-size: 1.4rem;
+    }
   }
 }

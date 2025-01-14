@@ -386,8 +386,30 @@ body {
   outline: none;
   color: #222731;
 }
+@media only screen and (max-width: 37.5em) {
+  .search-bar__input {
+    font-size: 1.3rem;
+    max-width: 184px;
+    padding-right: 7px;
+  }
+}
 .search-bar__alert {
   margin: 0 24px;
+  position: absolute;
+  right: 140px;
+  display: none;
+}
+@media only screen and (max-width: 48em) {
+  .search-bar__alert {
+    right: 100px;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .search-bar__alert {
+    font-size: 1.3rem;
+    top: -20px;
+    left: 0;
+  }
 }
 .search-bar__btn {
   background-color: #0079ff;
@@ -405,4 +427,11 @@ body {
 }
 .search-bar__btn:hover {
   background-color: #60abff;
+}
+@media only screen and (max-width: 37.5em) {
+  .search-bar__btn {
+    width: 84px;
+    height: 46px;
+    font-size: 1.4rem;
+  }
 }/*# sourceMappingURL=main.css.map */

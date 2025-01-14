@@ -403,8 +403,33 @@ body {
   outline: none;
 }
 
+@media only screen and (width <= 37.5em) {
+  .search-bar__input {
+    max-width: 184px;
+    padding-right: 7px;
+    font-size: 1.3rem;
+  }
+}
+
 .search-bar__alert {
   margin: 0 24px;
+  display: none;
+  position: absolute;
+  right: 140px;
+}
+
+@media only screen and (width <= 48em) {
+  .search-bar__alert {
+    right: 100px;
+  }
+}
+
+@media only screen and (width <= 37.5em) {
+  .search-bar__alert {
+    font-size: 1.3rem;
+    top: -20px;
+    left: 0;
+  }
 }
 
 .search-bar__btn {
@@ -424,5 +449,13 @@ body {
 
 .search-bar__btn:hover {
   background-color: #60abff;
+}
+
+@media only screen and (width <= 37.5em) {
+  .search-bar__btn {
+    width: 84px;
+    height: 46px;
+    font-size: 1.4rem;
+  }
 }
 /*# sourceMappingURL=index.b458fa94.css.map */
