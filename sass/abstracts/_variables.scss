@@ -1,8 +1,33 @@
+// Dark Light Mode Changin Components:
+// Changing components
+
+// Logo   --> grey-dark : white
+// Toggle --> grey : white (fff)
+
+// Search Box  --> white (fefe) : dark-blue
+// Search Text --> grey-blue : white(fff)
+
+// Card BG --> white(fefe) : dark-blue
+// Name    --> grey-blue : white(fff)
+// Date    --> grey : white (fff)
+// Bio     --> grey-blue : white(fff)
+
+// Stats BG   --> grey-light : blackish
+// Stat Title --> grey-blue : white (fff)
+// Stat Num   --> grey-dark : white (fff)
+
+// Link Icon --> grey-blue : white (fff)
+// Text      --> grey-blue : white (fff)
+
 // ######################
 // ## ROOT Variables ####
 // ######################
-// :root {
-// }
+:root {
+  --global-comp-bg: #fefefe;
+}
+
+[data-theme="dark"] {
+}
 
 // ######################
 // ## Font Variables ####

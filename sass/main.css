@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+:root {
+  --global-comp-bg: #fefefe;
+}
+
 /*
 0 - 600px:        Phone
 600 - 900px:      Tablet Portrait
@@ -17,7 +22,6 @@ $breakpoint argument choices:
 
 ORDER [When refactoring for responsiveness]: Base + typography > general layout + grid > page layout > components
 */
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 body,
 a {
   font-size: 1.5rem;
