@@ -584,6 +584,10 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"aenu9":[function(require,module,exports) {
+const modeToggle = document.querySelector("#mode-toggle");
+modeToggle.addEventListener("click", function() {
+    console.log("Light/Dark Mode Toggle!");
+});
 
 },{}]},["hycaY","aenu9"], "aenu9", "parcelRequire1189")
 
