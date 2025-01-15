@@ -1,5 +1,5 @@
 .search-bar {
-  background-color: $color-white;
+  background-color: var(--component-background);
   width: 730px;
   height: 70px;
 
@@ -8,7 +8,7 @@
 
   border-radius: 15px;
 
-  box-shadow: 0px 16px 30px -10px #4660bb33;
+  box-shadow: var(--box-shadow);
 
   //   position: relative;
 
@@ -46,13 +46,18 @@
     width: 100%;
     font-family: "Space Mono", monospace;
     font-size: 1.8rem;
-    color: $color-grey-blue;
+    color: var(--account-text);
+    background-color: var(--component-background);
     line-height: 25px;
     border-style: none;
     caret-color: $color-blue;
     &:focus {
       outline: none;
-      color: #222731;
+      color: var(--search-input-text);
+    }
+
+    &::placeholder {
+      color: var(--account-text);
     }
 
     @include respond(phone) {

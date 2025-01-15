@@ -1,32 +1,47 @@
 // Dark Light Mode Changin Components:
 // Changing components
 
-// Logo   --> grey-dark : white
-// Toggle --> grey : white (fff)
+// ✔ Body BG --> grey-light : blackish
 
-// Search Box  --> white (fefe) : dark-blue
-// Search Text --> grey-blue : white(fff)
+// ✔ Logo   --> grey-dark : white
+// ✔ Toggle --> grey : white (fff)
 
-// Card BG --> white(fefe) : dark-blue
-// Name    --> grey-blue : white(fff)
-// Date    --> grey : white (fff)
-// Bio     --> grey-blue : white(fff)
+// ✔ Search Box  --> white (fefe) : dark-blue
+// ✔ Search Text --> grey-blue : white(fff)
 
-// Stats BG   --> grey-light : blackish
-// Stat Title --> grey-blue : white (fff)
-// Stat Num   --> grey-dark : white (fff)
+// ✔ Card BG --> white(fefe) : dark-blue
+// ✔ Name    --> grey-blue : white(fff)
+// ✔ Date    --> grey : white (fff)
+// ✔ Bio     --> grey-blue : white(fff)
 
-// Link Icon --> grey-blue : white (fff)
-// Text      --> grey-blue : white (fff)
+// ✔ Stats BG   --> grey-light : blackish
+// ✔ Stat Title --> grey-blue : white (fff)
+// ✔ Stat Num   --> grey-dark : white (fff)
+
+// ✔ Link Icon --> grey-blue : white (fff)
+// ✔ Text      --> grey-blue : white (fff)
 
 // ######################
 // ## ROOT Variables ####
 // ######################
 :root {
-  --global-comp-bg: #fefefe;
+  --component-background: #fefefe;
+  --account-text: #4b6a9b;
+  --logo-title-number: #2b3442;
+  --body-stats-background: #f6f8ff;
+  --date-toggle: #697c9a;
+  --search-input-text: #222731;
+  --box-shadow: 0px 16px 30px -10px #4660bb33;
 }
 
 [data-theme="dark"] {
+  --component-background: #1e2a47;
+  --account-text: #fff;
+  --logo-title-number: #fff;
+  --body-stats-background: #141d2f;
+  --date-toggle: #fff;
+  --search-input-text: #fff;
+  --box-shadow: none;
 }
 
 // ######################

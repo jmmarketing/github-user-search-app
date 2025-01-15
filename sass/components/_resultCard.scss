@@ -3,8 +3,8 @@
   gap: 40px;
 
   border-radius: 15px;
-  background-color: $color-white;
-  box-shadow: 0px 16px 30px -10px #4660bb33;
+  background-color: var(--component-background);
+  box-shadow: var(--box-shadow);
 
   padding: 48px;
 
@@ -83,7 +83,7 @@
 
     &--date {
       line-height: normal;
-      color: $color-grey;
+      color: var(--date-toggle);
 
       @include respond(phone) {
         font-size: 1.3rem;
@@ -106,7 +106,7 @@
   display: flex;
   justify-content: space-between;
 
-  background-color: #f6f8ff;
+  background-color: var(--body-stats-background);
   border-radius: 10px;
   padding: 15px 32px;
 
