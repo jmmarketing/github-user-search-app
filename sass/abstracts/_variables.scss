@@ -30,6 +30,7 @@
   --logo-title-number: #2b3442;
   --body-stats-background: #f6f8ff;
   --date-toggle: #697c9a;
+  --toggleHover: #222731;
   --search-input-text: #222731;
   --box-shadow: 0px 16px 30px -10px #4660bb33;
 }
@@ -40,6 +41,7 @@
   --logo-title-number: #fff;
   --body-stats-background: #141d2f;
   --date-toggle: #fff;
+  --toggleHover: #90a4d4;
   --search-input-text: #fff;
   --box-shadow: none;
 }
@@ -66,10 +68,10 @@ $color-grey-light: #f6f8ff;
 $color-white: #fefefe;
 
 //darkmode
-$dm-color-blue: #0079ff;
-$dm-color-white: #fff;
-$dm-color-dark-blue: #1e2a47;
-$dm-color-blackish: #141d2f;
+// $dm-color-blue: #0079ff;
+// $dm-color-white: #fff;
+// $dm-color-dark-blue: #1e2a47;
+// $dm-color-blackish: #141d2f;
 
 //Note: will probably need to refactor above with root for darkmode feature. Just using to get styling going.
 
