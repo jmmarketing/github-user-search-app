@@ -10,4 +10,9 @@
   fill: #a5b4cc;
   font-weight: 400;
   line-height: normal;
+
+  &::before {
+    filter: brightness(0) saturate(100%) invert(77%) sepia(19%) saturate(368%)
+      hue-rotate(182deg) brightness(94%) contrast(87%) !important;
+  }
 }

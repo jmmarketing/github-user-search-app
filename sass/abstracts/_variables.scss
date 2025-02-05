@@ -44,6 +44,10 @@
   --toggleHover: #90a4d4;
   --search-input-text: #fff;
   --box-shadow: none;
+
+  .has-icon::before {
+    filter: brightness(0) saturate(100%) invert(100%);
+  }
 }
 
 // ######################
