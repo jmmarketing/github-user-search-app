@@ -71,8 +71,12 @@
     margin: 0 24px;
     position: absolute;
     right: 140px;
+    color: #f74646;
+    font-weight: 700;
+    line-height: normal;
+    font-size: 1.5rem;
 
-    display: none;
+    //Only here for testing
 
     @include respond(tablet) {
       right: 100px;

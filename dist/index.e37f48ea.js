@@ -586,6 +586,8 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 },{}],"aenu9":[function(require,module,exports) {
 const modeToggle = document.querySelector("#mode-toggle");
 const bodyElement = document.querySelector("body");
+const errorMessage = document.querySelector(".search-bar__alert");
+const searchButton = document.querySelector(".search-bar__btn");
 const state = {
     mode: "light",
     switchTo: "light"
@@ -607,6 +609,7 @@ modeToggle.addEventListener("click", function() {
     }
     updateToggleElement();
 });
+searchButton.addEventListener("click", displayError);
 function updateToggleElement() {
     // console.log(state.switchModeTo);
     const html = `
@@ -620,6 +623,9 @@ function updateToggleElement() {
   `;
     modeToggle.innerHTML = "";
     modeToggle.insertAdjacentHTML("afterbegin", html);
+}
+function displayError() {
+    errorMessage.classList.toggle("hide");
 }
 
 },{}]},["hycaY","aenu9"], "aenu9", "parcelRequire1189")
