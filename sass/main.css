@@ -121,6 +121,10 @@ body {
   display: none;
 }
 
+.no-bio {
+  opacity: 0.75;
+}
+
 .not-active {
   color: #a5b4cc;
   fill: #a5b4cc;

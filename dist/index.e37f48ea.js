@@ -584,6 +584,7 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"aenu9":[function(require,module,exports) {
+//########## ELEMENTS #############//
 const modeToggle = document.querySelector("#mode-toggle");
 const bodyElement = document.querySelector("body");
 const errorMessage = document.querySelector(".search-bar__alert");
@@ -592,6 +593,7 @@ const state = {
     mode: "light",
     switchTo: "light"
 };
+// ######### EVENT LISTENERS ############
 modeToggle.addEventListener("click", function() {
     console.log("Light/Dark Mode Toggle!");
     console.log(bodyElement);
@@ -610,6 +612,7 @@ modeToggle.addEventListener("click", function() {
     updateToggleElement();
 });
 searchButton.addEventListener("click", displayError);
+// ##### FUNCTIONS ###########
 function updateToggleElement() {
     // console.log(state.switchModeTo);
     const html = `
