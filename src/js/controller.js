@@ -15,8 +15,8 @@ let model = {};
 
 // ######### EVENT LISTENERS ############
 modeToggle.addEventListener("click", function () {
-  console.log("Light/Dark Mode Toggle!");
-  console.log(bodyElement);
+  // console.log("Light/Dark Mode Toggle!");
+  // console.log(bodyElement);
 
   //
   if (!bodyElement.dataset.theme) {
@@ -36,6 +36,7 @@ modeToggle.addEventListener("click", function () {
 
 searchButton.addEventListener("click", (e) => {
   if (!inputField.value) {
+    displayError();
     throw new Error("EMPTY SEARCH!");
   }
 
@@ -75,6 +76,63 @@ function clearError() {
 
 // %%%%%%% Result Card View Functions %%%%%%%
 
+function formatJoinedDate(time) {
+  const date = new Date(time);
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  const day = date.getDate();
+  const month = months[date.getMonth()];
+  const year = date.getFullYear();
+
+  return `${day} ${month} ${year}`;
+}
+
+function renderUserData(data) {
+  //Initiate Shadow DOM
+  resultCard.attachShadow({ mode: "open" });
+
+  const avatar = `<img src="${data["avatar_url"]} class="result-card__avatar" />`;
+
+  // Need to add div.result-card__info when compiling
+  const title = `
+    <div class="result-card__dev-title">
+          <div class="result-card__dev-title--name">
+            <h1>${data.name ? data.name : data.login}</h1>
+            <p>@${data.login}</p>
+          </div>
+          <p class="result-card__dev-title--date">Joined ${formatJoinedDate(
+            data["created_at"]
+          )}</p>
+    </div>
+  `;
+
+  const about = ``;
+  const stats = ``;
+  const links = ``;
+
+  const compiledHTML = `
+    ${avatar}
+    <div class="result-card__info">
+     ${title}
+     ${about}    
+     ${stats} 
+     ${links}
+    </div>
+  `;
+}
+
 //%%%%% Model Functions %%%%%%%%%
 async function searchGithub(searchParam) {
   const url = `https://api.github.com/users/${searchParam}`;
@@ -89,6 +147,7 @@ async function searchGithub(searchParam) {
 
     model = Object.fromEntries(
       [
+        "login",
         "avatar_url",
         "html_url",
         "name",
