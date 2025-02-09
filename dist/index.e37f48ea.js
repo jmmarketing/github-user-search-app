@@ -589,10 +589,12 @@ const modeToggle = document.querySelector("#mode-toggle");
 const bodyElement = document.querySelector("body");
 const errorMessage = document.querySelector(".search-bar__alert");
 const searchButton = document.querySelector(".search-bar__btn");
+const inputField = document.querySelector(".search-bar__input");
 const state = {
     mode: "light",
     switchTo: "light"
 };
+const model = {};
 // ######### EVENT LISTENERS ############
 modeToggle.addEventListener("click", function() {
     console.log("Light/Dark Mode Toggle!");
@@ -611,7 +613,10 @@ modeToggle.addEventListener("click", function() {
     }
     updateToggleElement();
 });
-searchButton.addEventListener("click", displayError);
+searchButton.addEventListener("click", (e)=>{
+    if (!inputField.value) throw new Error("EMPTY SEARCH!");
+    searchGithub(inputField.value);
+});
 // ##### FUNCTIONS ###########
 function updateToggleElement() {
     // console.log(state.switchModeTo);
@@ -629,6 +634,19 @@ function updateToggleElement() {
 }
 function displayError() {
     errorMessage.classList.toggle("hide");
+}
+async function searchGithub(searchParam) {
+    const url = `https://api.github.com/users/${searchParam}`;
+    try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`Github Status Response: ${response.status}`);
+        const data = await response.json();
+        const { avatar_url, html_url, name, company, blog, location, bio, twitter_username, public_repos, followers, following, created_at } = data;
+        console.log(avatar_url, html_url, name, company, blog, location, bio, twitter_username, public_repos, followers, following, created_at);
+        console.log(model);
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 },{}]},["hycaY","aenu9"], "aenu9", "parcelRequire1189")

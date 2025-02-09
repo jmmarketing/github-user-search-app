@@ -4,8 +4,6 @@
 Example Response:
 {
     "avatar_url": "https://avatars.githubusercontent.com/u/583231?v=4",
-    "gravatar_id": "",
-    "url": "https://api.github.com/users/octocat",
     "html_url": "https://github.com/octocat",
     "name": "The Octocat",
     "company": "@github",
