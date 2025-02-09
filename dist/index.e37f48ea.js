@@ -590,11 +590,12 @@ const bodyElement = document.querySelector("body");
 const errorMessage = document.querySelector(".search-bar__alert");
 const searchButton = document.querySelector(".search-bar__btn");
 const inputField = document.querySelector(".search-bar__input");
+const resultCard = document.querySelector(".result-card");
 const state = {
     mode: "light",
     switchTo: "light"
 };
-const model = {};
+let model = {};
 // ######### EVENT LISTENERS ############
 modeToggle.addEventListener("click", function() {
     console.log("Light/Dark Mode Toggle!");
@@ -618,6 +619,7 @@ searchButton.addEventListener("click", (e)=>{
     searchGithub(inputField.value);
 });
 // ##### FUNCTIONS ###########
+// %%%%% Nav bar View Functions %%%%%
 function updateToggleElement() {
     // console.log(state.switchModeTo);
     const html = `
@@ -632,20 +634,42 @@ function updateToggleElement() {
     modeToggle.innerHTML = "";
     modeToggle.insertAdjacentHTML("afterbegin", html);
 }
+// %%%% Search Bar View Functions %%%%%
 function displayError() {
-    errorMessage.classList.toggle("hide");
+    errorMessage.classList.remove("hide");
 }
+function clearError() {
+    errorMessage.classList.add("hide");
+}
+// %%%%%%% Result Card View Functions %%%%%%%
+//%%%%% Model Functions %%%%%%%%%
 async function searchGithub(searchParam) {
     const url = `https://api.github.com/users/${searchParam}`;
     try {
         const response = await fetch(url);
         if (!response.ok) throw new Error(`Github Status Response: ${response.status}`);
         const data = await response.json();
-        const { avatar_url, html_url, name, company, blog, location, bio, twitter_username, public_repos, followers, following, created_at } = data;
-        console.log(avatar_url, html_url, name, company, blog, location, bio, twitter_username, public_repos, followers, following, created_at);
-        console.log(model);
+        model = Object.fromEntries([
+            "avatar_url",
+            "html_url",
+            "name",
+            "company",
+            "blog",
+            "location",
+            "bio",
+            "twitter_username",
+            "public_repos",
+            "followers",
+            "following",
+            "created_at"
+        ].map((key)=>[
+                key,
+                data[key]
+            ]));
+        clearError();
     } catch (error) {
         console.log(error);
+        displayError();
     }
 }
 
