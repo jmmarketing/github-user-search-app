@@ -31,12 +31,22 @@ body, a {
   font-size: 1.5rem;
   font-weight: normal;
   line-height: 2.5rem;
+  text-decoration: none;
 }
 
 @media only screen and (width <= 37.5em) {
   body, a {
     font-size: 1.3rem;
   }
+}
+
+a:hover {
+  text-decoration-skip-ink: none;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
 }
 
 h1, .heading-primary {
@@ -102,6 +112,7 @@ body {
 .not-active {
   color: #a5b4cc;
   fill: #a5b4cc;
+  cursor: not-allowed;
   font-weight: 400;
   line-height: normal;
 }
@@ -189,6 +200,7 @@ body {
 }
 
 .result-card__avatar {
+  clip-path: circle(50%);
   width: 117px;
   height: 117px;
   transition: all .5s ease-out;
@@ -329,7 +341,6 @@ body {
 }
 
 .result-card__dev-links--site {
-  text-decoration: none;
   display: flex;
 }
 
@@ -337,15 +348,6 @@ body {
   content: url("icon-website.d6a79a90.svg");
   height: 20px;
   margin-right: 20px;
-}
-
-.result-card__dev-links--site:hover {
-  text-decoration-skip-ink: none;
-  text-underline-offset: auto;
-  text-underline-position: from-font;
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-  text-decoration-thickness: auto;
 }
 
 .result-card__dev-links--right {

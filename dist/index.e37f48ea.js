@@ -667,11 +667,7 @@ function formatJoinedDate(time) {
     return `${day} ${month} ${year}`;
 }
 function renderUserData(data) {
-    //Initiate Shadow DOM
-    resultCard.attachShadow({
-        mode: "open"
-    });
-    const avatar = `<img src="${data["avatar_url"]} class="result-card__avatar" />`;
+    const avatar = `<img src="${data["avatar_url"]}" class="result-card__avatar" />`;
     // Need to add div.result-card__info when compiling
     const title = `
     <div class="result-card__dev-title">
@@ -682,9 +678,49 @@ function renderUserData(data) {
           <p class="result-card__dev-title--date">Joined ${formatJoinedDate(data["created_at"])}</p>
     </div>
   `;
-    const about = ``;
-    const stats = ``;
-    const links = ``;
+    const about = `
+    <p class="result-card__dev-about ${!data.bio ? "no-bio" : ""}">
+      ${data.bio ?? "This profile has no bio"}
+    </p>
+  `;
+    const stats = `
+    <div class="result-card__dev-stats">
+       <div class="result-card__dev-stats-group">
+          <h4 class="result-card__dev-stats--title">Repos</h4>
+          <h2 class="result-card__dev-stats--number">${data["public_repos"]}</h2>
+        </div>
+     <div class="result-card__dev-stats-group">
+        <h4 class="result-card__dev-stats--title">Followers</h4>
+        <h2 class="result-card__dev-stats--number">${data.followers}</h2>
+      </div>
+      <div class="result-card__dev-stats-group">
+         <h4 class="result-card__dev-stats--title">Following</h4>
+         <h2 class="result-card__dev-stats--number">${data.following}</h2>
+      </div>
+    </div>
+  `;
+    const links = `
+  <div class="result-card__dev-links">
+          <div class="result-card__dev-links--left">
+            <p class="result-card__dev-links--location has-icon ${!data.location ? "not-active" : ""}"
+              >${data.location ?? "Not Available"}</p
+            >
+            <a
+              href="${!data.blog ? "#" : data.blog}"
+              class="result-card__dev-links--site has-icon ${!data.blog ? "not-active" : ""}"
+              >${data.blog?.split("//")[1] || "Not Available"}</a
+            >
+          </div>
+          <div class="result-card__dev-links--right">
+            <p class="result-card__dev-links--twitter has-icon ${!data["twitter_username"] ? "not-active" : ""}"
+              >${data["twitter_username"] ?? "Not Available"}</p
+            >
+            <p class="result-card__dev-links--github has-icon">@${data.login}</p>
+          </div>
+        </div>
+  
+  
+  `;
     const compiledHTML = `
     ${avatar}
     <div class="result-card__info">
@@ -694,6 +730,10 @@ function renderUserData(data) {
      ${links}
     </div>
   `;
+    // console.log(compiledHTML);
+    // resultCard.shadowRoot.innerHTML = compiledHTML;
+    resultCard.innerHTML = "";
+    resultCard.insertAdjacentHTML("beforeend", compiledHTML);
 }
 //%%%%% Model Functions %%%%%%%%%
 async function searchGithub(searchParam) {
@@ -721,6 +761,8 @@ async function searchGithub(searchParam) {
                 data[key]
             ]));
         clearError();
+        console.log(model);
+        renderUserData(model);
     } catch (error) {
         console.log(error);
         displayError();

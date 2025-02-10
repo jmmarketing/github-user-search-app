@@ -36,7 +36,7 @@
   &__avatar {
     height: 117px;
     width: 117px;
-
+    clip-path: circle(50%);
     position: absolute;
 
     transition: all 0.5s ease-out;
@@ -158,22 +158,12 @@
     }
   }
   &--site {
-    text-decoration: none;
     display: flex;
 
     &::before {
       content: url(../assets/icon-website.svg);
       margin-right: 20px;
       height: 20px;
-    }
-
-    &:hover {
-      text-decoration-line: underline;
-      text-decoration-style: solid;
-      text-decoration-skip-ink: none;
-      text-decoration-thickness: auto;
-      text-underline-offset: auto;
-      text-underline-position: from-font;
     }
   }
 

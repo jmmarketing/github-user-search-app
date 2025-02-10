@@ -49,6 +49,7 @@ a {
   font-family: "Space Mono", monospace;
   line-height: 2.5rem;
   font-weight: normal;
+  text-decoration: none;
   color: var(--account-text);
 }
 @media only screen and (max-width: 37.5em) {
@@ -56,6 +57,16 @@ a {
   a {
     font-size: 1.3rem;
   }
+}
+
+a:hover {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
 }
 
 h1,
@@ -130,6 +141,7 @@ body {
   fill: #a5b4cc;
   font-weight: 400;
   line-height: normal;
+  cursor: not-allowed;
 }
 .not-active::before {
   filter: brightness(0) saturate(100%) invert(77%) sepia(19%) saturate(368%) hue-rotate(182deg) brightness(94%) contrast(87%) !important;
@@ -206,6 +218,8 @@ body {
 .result-card__avatar {
   height: 117px;
   width: 117px;
+  -webkit-clip-path: circle(50%);
+          clip-path: circle(50%);
   position: absolute;
   transition: all 0.5s ease-out;
 }
@@ -325,22 +339,12 @@ body {
   height: 20px;
 }
 .result-card__dev-links--site {
-  text-decoration: none;
   display: flex;
 }
 .result-card__dev-links--site::before {
   content: url(../assets/icon-website.svg);
   margin-right: 20px;
   height: 20px;
-}
-.result-card__dev-links--site:hover {
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-  -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
-  text-decoration-thickness: auto;
-  text-underline-offset: auto;
-  text-underline-position: from-font;
 }
 .result-card__dev-links--right {
   display: flex;

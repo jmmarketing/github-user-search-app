@@ -6,11 +6,21 @@ a {
   font-family: "Space Mono", monospace;
   line-height: 2.5rem;
   font-weight: normal;
+  text-decoration: none;
   color: var(--account-text);
 
   @include respond(phone) {
     font-size: 1.3rem;
   }
+}
+
+a:hover {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
 }
 
 h1,
