@@ -138,33 +138,29 @@ function renderUserData(data) {
   `;
   const links = `
   <div class="result-card__dev-links">
-          <div class="result-card__dev-links--left">
-            <p class="result-card__dev-links--location has-icon ${
-              !data.location ? "not-active" : ""
-            }"
-              >${data.location ?? "Not Available"}</p
-            >
-            <a
-              href="${!data.blog ? "#" : data.blog}"
-              class="result-card__dev-links--site has-icon ${
-                !data.blog ? "not-active" : ""
-              }"
-              >${data.blog?.split("//")[1] || "Not Available"}</a
-            >
-          </div>
-          <div class="result-card__dev-links--right">
-            <p class="result-card__dev-links--twitter has-icon ${
-              !data["twitter_username"] ? "not-active" : ""
-            }"
-              >${data["twitter_username"] ?? "Not Available"}</p
-            >
-            <p class="result-card__dev-links--github has-icon">@${
-              data.login
-            }</p>
-          </div>
-        </div>
-  
-  
+      <div class="result-card__dev-links--left">
+        <p class="result-card__dev-links--location has-icon ${
+          !data.location ? "not-active" : ""
+        }">${data.location ?? "Not Available"}</p>
+        <a href="${!data.blog ? "#" : data.blog}"
+            class="result-card__dev-links--site has-icon ${
+              !data.blog ? "not-active" : ""
+            }">${data.blog?.split("//")[1] || "Not Available"}
+        </a>
+      </div>
+        <div class="result-card__dev-links--right">
+          <a href="https://twitter.com/${
+            data["twitter_username"] ?? ""
+          }" class="result-card__dev-links--twitter has-icon 
+           ${!data["twitter_username"] ? "not-active" : ""}">
+           ${data["twitter_username"] ?? "Not Available"}
+           </a>
+          <a href="${
+            data["html_url"]
+          }" class="result-card__dev-links--github has-icon">
+          @${data.login}</a>
+      </div>
+  </div>
   `;
 
   const compiledHTML = `

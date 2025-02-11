@@ -141,10 +141,13 @@ body {
   fill: #a5b4cc;
   font-weight: 400;
   line-height: normal;
-  cursor: not-allowed;
+  cursor: default;
 }
 .not-active::before {
   filter: brightness(0) saturate(100%) invert(77%) sepia(19%) saturate(368%) hue-rotate(182deg) brightness(94%) contrast(87%) !important;
+}
+.not-active:hover {
+  text-decoration: none;
 }
 
 .nav__info-bar {
