@@ -669,24 +669,30 @@ function formatJoinedDate(time) {
     const year = date.getFullYear();
     return `${day} ${month} ${year}`;
 }
-function renderUserData(data) {
-    const avatar = `<img src="${data["avatar_url"]}" class="result-card__avatar" />`;
-    // Need to add div.result-card__info when compiling
-    const title = `
+function compileAvatar(data) {
+    return `<img src="${data["avatar_url"]}" class="result-card__avatar" />`;
+}
+function compileTitle(data) {
+    const joinDate = formatJoinedDate(data["created_at"]);
+    return `
     <div class="result-card__dev-title">
           <div class="result-card__dev-title--name">
             <h1>${data.name ? data.name : data.login}</h1>
             <p>@${data.login}</p>
           </div>
-          <p class="result-card__dev-title--date">Joined ${formatJoinedDate(data["created_at"])}</p>
+          <p class="result-card__dev-title--date">Joined ${joinDate}</p>
     </div>
   `;
-    const about = `
+}
+function compileAbout(data) {
+    return `
     <p class="result-card__dev-about ${!data.bio ? "no-bio" : ""}">
       ${data.bio ?? "This profile has no bio"}
     </p>
   `;
-    const stats = `
+}
+function compileStats(data) {
+    return `
     <div class="result-card__dev-stats">
        <div class="result-card__dev-stats-group">
           <h4 class="result-card__dev-stats--title">Repos</h4>
@@ -702,7 +708,9 @@ function renderUserData(data) {
       </div>
     </div>
   `;
-    const links = `
+}
+function compileLinks(data) {
+    return `
   <div class="result-card__dev-links">
       <div class="result-card__dev-links--left">
         <p class="result-card__dev-links--location has-icon ${!data.location ? "not-active" : ""}">${data.location ?? "Not Available"}</p>
@@ -720,6 +728,13 @@ function renderUserData(data) {
       </div>
   </div>
   `;
+}
+function renderUserData(data) {
+    const avatar = compileAvatar(data);
+    const title = compileTitle(data);
+    const about = compileAbout(data);
+    const stats = compileStats(data);
+    const links = compileLinks(data);
     const compiledHTML = `
     ${avatar}
     <div class="result-card__info">
