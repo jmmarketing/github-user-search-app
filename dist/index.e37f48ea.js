@@ -644,6 +644,9 @@ function displayError() {
 function clearError() {
     errorMessage.classList.add("hide");
 }
+function clearInput() {
+    inputField.value = "";
+}
 // %%%%%%% Result Card View Functions %%%%%%%
 function formatJoinedDate(time) {
     const date = new Date(time);
@@ -757,6 +760,7 @@ async function searchGithub(searchParam) {
                 data[key]
             ]));
         clearError();
+        clearInput();
         console.log(model);
         renderUserData(model);
     } catch (error) {

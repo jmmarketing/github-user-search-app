@@ -74,6 +74,10 @@ function clearError() {
   errorMessage.classList.add("hide");
 }
 
+function clearInput() {
+  inputField.value = "";
+}
+
 // %%%%%%% Result Card View Functions %%%%%%%
 
 function formatJoinedDate(time) {
@@ -210,6 +214,7 @@ async function searchGithub(searchParam) {
     );
 
     clearError();
+    clearInput();
 
     console.log(model);
 
