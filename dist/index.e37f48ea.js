@@ -710,12 +710,17 @@ function compileStats(data) {
   `;
 }
 function compileLinks(data) {
+    //blog scenarios :
+    // - bare url (jmmarketing.com)
+    // - http:// (https://jm.com)
+    // - www. (www.jm.com)
+    const cleanBlog = data.blog?.replaceAll(/(https:\/\/|http:\/\/|www\.)/g, "") ?? "Not Available";
     return `
   <div class="result-card__dev-links">
       <div class="result-card__dev-links--left">
         <p class="result-card__dev-links--location has-icon ${!data.location ? "not-active" : ""}">${data.location ?? "Not Available"}</p>
-        <a href="${!data.blog ? "#" : data.blog}"
-            class="result-card__dev-links--site has-icon ${!data.blog ? "not-active" : ""}">${data.blog?.split("//")[1] || "Not Available"}
+        <a href="${!data.blog ? "#" : "http://" + cleanBlog}"
+            class="result-card__dev-links--site has-icon ${!data.blog ? "not-active" : ""}" target="_blank">${cleanBlog}
         </a>
       </div>
         <div class="result-card__dev-links--right">
