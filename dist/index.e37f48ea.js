@@ -595,16 +595,20 @@ var _resultCardViewJs = require("./views/resultCardView.js");
 var _resultCardViewJsDefault = parcelHelpers.interopDefault(_resultCardViewJs);
 var _runtime = require("regenerator-runtime/runtime");
 // ######### EVENT LISTENERS ############
-modeToggle.addEventListener("click", changeTheme);
-searchButton.addEventListener("click", (e)=>{
-    if (!inputField.value) {
-        displayError();
-        throw new Error("EMPTY SEARCH!");
-    }
-    searchGithub(inputField.value);
-});
+// modeToggle.addEventListener("click", changeTheme);
+// searchButton.addEventListener("click", (e) => {
+//   if (!inputField.value) {
+//     displayError();
+//     throw new Error("EMPTY SEARCH!");
+//   }
+//   searchGithub(inputField.value);
+// });
 // ##### FUNCTIONS ###########
+const controlThemeToggle = function() {
+    (0, _infobarViewJsDefault.default).changeTheme();
+};
 function init() {}
+(0, _infobarViewJsDefault.default).addHandlerToggle(controlThemeToggle);
 init();
 
 },{"./model.js":"Y4A21","./views/infobarView.js":"hcrhf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./views/searchbarView.js":"64D3l","./views/resultCardView.js":"15uga","core-js/modules/web.immediate.js":"49tUX","regenerator-runtime/runtime":"dXNgZ"}],"Y4A21":[function(require,module,exports) {
@@ -704,7 +708,10 @@ class infobarView {
         mode: "light",
         switchTo: "light"
     };
-    updateToggleElement() {
+    addHandlerToggle(handlerFunction) {
+        this._modeToggle.addEventListener("click", handlerFunction);
+    }
+    _updateToggleElement() {
         // console.log(state.switchModeTo);
         const html = `
     <h4 class="nav__toggle--mode">${this._state.switchTo}</h4>
@@ -719,14 +726,14 @@ class infobarView {
         this._modeToggle.insertAdjacentHTML("afterbegin", html);
     }
     changeTheme() {
-        if (!bodyElement.dataset.theme) {
-            bodyElement.dataset.theme = "dark";
-            modeToggle.dataset.theme = "dark";
+        if (!this._bodyElement.dataset.theme) {
+            this._bodyElement.dataset.theme = "dark";
+            this._modeToggle.dataset.theme = "dark";
             this._state.mode = "dark";
             this._state.switchTo = "light";
         } else {
-            delete bodyElement.dataset.theme;
-            delete modeToggle.dataset.theme;
+            delete this._bodyElement.dataset.theme;
+            delete this._modeToggle.dataset.theme;
             this._state.mode = "light";
             this._state.switchTo = "dark";
         }

@@ -7,7 +7,11 @@ class infobarView {
     switchTo: "light",
   };
 
-  updateToggleElement() {
+  addHandlerToggle(handlerFunction) {
+    this._modeToggle.addEventListener("click", handlerFunction);
+  }
+
+  _updateToggleElement() {
     // console.log(state.switchModeTo);
 
     const html = `
@@ -28,14 +32,14 @@ class infobarView {
   }
 
   changeTheme() {
-    if (!bodyElement.dataset.theme) {
-      bodyElement.dataset.theme = "dark";
-      modeToggle.dataset.theme = "dark";
+    if (!this._bodyElement.dataset.theme) {
+      this._bodyElement.dataset.theme = "dark";
+      this._modeToggle.dataset.theme = "dark";
       this._state.mode = "dark";
       this._state.switchTo = "light";
     } else {
-      delete bodyElement.dataset.theme;
-      delete modeToggle.dataset.theme;
+      delete this._bodyElement.dataset.theme;
+      delete this._modeToggle.dataset.theme;
       this._state.mode = "light";
       this._state.switchTo = "dark";
     }

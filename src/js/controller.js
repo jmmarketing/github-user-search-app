@@ -7,18 +7,21 @@ import "core-js/stable";
 import "regenerator-runtime/runtime";
 
 // ######### EVENT LISTENERS ############
-modeToggle.addEventListener("click", changeTheme);
+// modeToggle.addEventListener("click", changeTheme);
 
-searchButton.addEventListener("click", (e) => {
-  if (!inputField.value) {
-    displayError();
-    throw new Error("EMPTY SEARCH!");
-  }
+// searchButton.addEventListener("click", (e) => {
+//   if (!inputField.value) {
+//     displayError();
+//     throw new Error("EMPTY SEARCH!");
+//   }
 
-  searchGithub(inputField.value);
-});
+//   searchGithub(inputField.value);
+// });
 // ##### FUNCTIONS ###########
+const controlThemeToggle = function () {
+  infobarView.changeTheme();
+};
 
 function init() {}
-
+infobarView.addHandlerToggle(controlThemeToggle);
 init();
