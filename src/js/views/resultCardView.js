@@ -29,7 +29,7 @@ class resultCardView {
   }
 
   _compileTitle(data) {
-    const joinDate = formatJoinedDate(data["created_at"]);
+    const joinDate = this._formatJoinedDate(data["created_at"]);
     return `
           <div class="result-card__dev-title">
                 <div class="result-card__dev-title--name">
@@ -74,9 +74,7 @@ class resultCardView {
     // - http:// (https://jm.com)
     // - www. (www.jm.com)
 
-    const cleanBlog =
-      data.blog?.replaceAll(/(https:\/\/|http:\/\/|www\.)/g, "") ??
-      "Not Available";
+    const cleanBlog = data.blog.replaceAll(/(https:\/\/|http:\/\/|www\.)/g, "");
 
     return `
         <div class="result-card__dev-links">
@@ -87,7 +85,7 @@ class resultCardView {
               <a href="${!data.blog ? "#" : "http://" + cleanBlog}"
                   class="result-card__dev-links--site has-icon ${
                     !data.blog ? "not-active" : ""
-                  }" target="_blank">${cleanBlog}
+                  }" target="_blank">${!data.blog ? "Not Available" : cleanBlog}
               </a>
             </div>
               <div class="result-card__dev-links--right">
@@ -126,10 +124,7 @@ class resultCardView {
     // console.log(compiledHTML);
     // resultCard.shadowRoot.innerHTML = compiledHTML;
     this._resultCard.innerHTML = "";
-    this._resultCard.insertAdjacentHTML(
-      "beforeend",
-      this._compiledHTML.bind(this)
-    );
+    this._resultCard.insertAdjacentHTML("beforeend", compiledHTML);
   }
 }
 

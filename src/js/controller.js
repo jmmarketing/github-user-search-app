@@ -6,22 +6,26 @@ import resultCardView from "./views/resultCardView.js";
 import "core-js/stable";
 import "regenerator-runtime/runtime";
 
-// ######### EVENT LISTENERS ############
-// modeToggle.addEventListener("click", changeTheme);
-
-// searchButton.addEventListener("click", (e) => {
-//   if (!inputField.value) {
-//     displayError();
-//     throw new Error("EMPTY SEARCH!");
-//   }
-
-//   searchGithub(inputField.value);
-// });
 // ##### FUNCTIONS ###########
 const controlThemeToggle = function () {
   infobarView.changeTheme();
 };
 
-function init() {}
-infobarView.addHandlerToggle(controlThemeToggle);
+const controlUserSearch = async function () {
+  try {
+    const githubUser = searchbarView.getInput();
+
+    await model.searchGithub(githubUser);
+    resultCardView.renderUserData(model.data);
+    searchbarView._clearInput();
+  } catch (err) {
+    console.log(err);
+    searchbarView._displayError();
+  }
+};
+
+function init() {
+  infobarView.addHandlerToggle(controlThemeToggle);
+  searchbarView.addHandlerGetInput(controlUserSearch);
+}
 init();

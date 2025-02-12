@@ -594,25 +594,28 @@ var _searchbarViewJsDefault = parcelHelpers.interopDefault(_searchbarViewJs);
 var _resultCardViewJs = require("./views/resultCardView.js");
 var _resultCardViewJsDefault = parcelHelpers.interopDefault(_resultCardViewJs);
 var _runtime = require("regenerator-runtime/runtime");
-// ######### EVENT LISTENERS ############
-// modeToggle.addEventListener("click", changeTheme);
-// searchButton.addEventListener("click", (e) => {
-//   if (!inputField.value) {
-//     displayError();
-//     throw new Error("EMPTY SEARCH!");
-//   }
-//   searchGithub(inputField.value);
-// });
 // ##### FUNCTIONS ###########
 const controlThemeToggle = function() {
     (0, _infobarViewJsDefault.default).changeTheme();
 };
-function init() {}
-(0, _infobarViewJsDefault.default).addHandlerToggle(controlThemeToggle);
+const controlUserSearch = async function() {
+    try {
+        const githubUser = (0, _searchbarViewJsDefault.default).getInput();
+        await _modelJs.searchGithub(githubUser);
+        (0, _resultCardViewJsDefault.default).renderUserData(_modelJs.data);
+        (0, _searchbarViewJsDefault.default)._clearInput();
+    } catch (err) {
+        console.log(err);
+        (0, _searchbarViewJsDefault.default)._displayError();
+    }
+};
+function init() {
+    (0, _infobarViewJsDefault.default).addHandlerToggle(controlThemeToggle);
+    (0, _searchbarViewJsDefault.default).addHandlerGetInput(controlUserSearch);
+}
 init();
 
 },{"./model.js":"Y4A21","./views/infobarView.js":"hcrhf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./views/searchbarView.js":"64D3l","./views/resultCardView.js":"15uga","core-js/modules/web.immediate.js":"49tUX","regenerator-runtime/runtime":"dXNgZ"}],"Y4A21":[function(require,module,exports) {
-//[GitHub users API](https://docs.github.com/en/rest/reference/users#get-a-user)
 //The GitHub users API endpoint is `https://api.github.com/users/:username`. So, if you wanted to search for the Octocat profile, you'd be able to make a request to `https://api.github.com/users/octocat`.
 /*
 Example Response:
@@ -631,16 +634,16 @@ Example Response:
     "created_at": "2011-01-25T18:44:36Z",
 }*/ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "model", ()=>model);
+parcelHelpers.export(exports, "data", ()=>data);
 parcelHelpers.export(exports, "searchGithub", ()=>searchGithub);
-let model = {};
+let data = {};
 async function searchGithub(searchParam) {
     const url = `https://api.github.com/users/${searchParam}`;
     try {
         const response = await fetch(url);
         if (!response.ok) throw new Error(`Github Status Response: ${response.status}`);
-        const data = await response.json();
-        model = Object.fromEntries([
+        const userData = await response.json();
+        data = Object.fromEntries([
             "login",
             "avatar_url",
             "html_url",
@@ -656,14 +659,11 @@ async function searchGithub(searchParam) {
             "created_at"
         ].map((key)=>[
                 key,
-                data[key]
+                userData[key]
             ]));
-        //   clearError(); // Call with View
-        //   clearInput();  // Call with View
-        console.log(model);
-    //   renderUserData(model); // Call With View
+        console.log(data);
     } catch (error) {
-        console.log(error);
+        throw error;
     //   displayError(); // Call with View
     }
 }
@@ -749,6 +749,9 @@ class searchbarView {
     _errorMessage = document.querySelector(".search-bar__alert");
     _searchButton = document.querySelector(".search-bar__btn");
     _inputField = document.querySelector(".search-bar__input");
+    addHandlerGetInput(handlerFunction) {
+        this._searchButton.addEventListener("click", handlerFunction);
+    }
     _displayError() {
         this._errorMessage.classList.remove("hide");
     }
@@ -757,13 +760,15 @@ class searchbarView {
     }
     _clearInput() {
         this._inputField.value = "";
+        this._clearError();
     }
     getInput() {
-        if (!inputField.value) {
+        if (!this._inputField.value) {
             this._displayError();
             throw new Error("EMPTY SEARCH!");
         }
-        return this._inputField.value;
+        const user = this._inputField.value;
+        return user;
     }
 }
 exports.default = new searchbarView();
@@ -798,7 +803,7 @@ class resultCardView {
         return `<img src="${data["avatar_url"]}" class="result-card__avatar" />`;
     }
     _compileTitle(data) {
-        const joinDate = formatJoinedDate(data["created_at"]);
+        const joinDate = this._formatJoinedDate(data["created_at"]);
         return `
           <div class="result-card__dev-title">
                 <div class="result-card__dev-title--name">
@@ -839,13 +844,13 @@ class resultCardView {
         // - bare url (jmmarketing.com)
         // - http:// (https://jm.com)
         // - www. (www.jm.com)
-        const cleanBlog = data.blog?.replaceAll(/(https:\/\/|http:\/\/|www\.)/g, "") ?? "Not Available";
+        const cleanBlog = data.blog.replaceAll(/(https:\/\/|http:\/\/|www\.)/g, "");
         return `
         <div class="result-card__dev-links">
             <div class="result-card__dev-links--left">
               <p class="result-card__dev-links--location has-icon ${!data.location ? "not-active" : ""}">${data.location ?? "Not Available"}</p>
               <a href="${!data.blog ? "#" : "http://" + cleanBlog}"
-                  class="result-card__dev-links--site has-icon ${!data.blog ? "not-active" : ""}" target="_blank">${cleanBlog}
+                  class="result-card__dev-links--site has-icon ${!data.blog ? "not-active" : ""}" target="_blank">${!data.blog ? "Not Available" : cleanBlog}
               </a>
             </div>
               <div class="result-card__dev-links--right">
@@ -877,7 +882,7 @@ class resultCardView {
         // console.log(compiledHTML);
         // resultCard.shadowRoot.innerHTML = compiledHTML;
         this._resultCard.innerHTML = "";
-        this._resultCard.insertAdjacentHTML("beforeend", this._compiledHTML.bind(this));
+        this._resultCard.insertAdjacentHTML("beforeend", compiledHTML);
     }
 }
 exports.default = new resultCardView();
