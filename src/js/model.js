@@ -16,3 +16,46 @@ Example Response:
     "following": 9,
     "created_at": "2011-01-25T18:44:36Z",
 }*/
+
+export let model = {};
+
+export async function searchGithub(searchParam) {
+  const url = `https://api.github.com/users/${searchParam}`;
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Github Status Response: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    model = Object.fromEntries(
+      [
+        "login",
+        "avatar_url",
+        "html_url",
+        "name",
+        "company",
+        "blog",
+        "location",
+        "bio",
+        "twitter_username",
+        "public_repos",
+        "followers",
+        "following",
+        "created_at",
+      ].map((key) => [key, data[key]])
+    );
+
+    //   clearError(); // Call with View
+    //   clearInput();  // Call with View
+
+    console.log(model);
+
+    //   renderUserData(model); // Call With View
+  } catch (error) {
+    console.log(error);
+    //   displayError(); // Call with View
+  }
+}
