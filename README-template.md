@@ -1,6 +1,6 @@
 # Frontend Mentor - GitHub user search app solution
 
-This is a solution to the [GitHub user search app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [GitHub user search app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -16,8 +16,6 @@ This is a solution to the [GitHub user search app challenge on Frontend Mentor](
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -29,58 +27,65 @@ Users should be able to:
 - Search for GitHub users by their username
 - See relevant user information based on their search
 - Switch between light and dark themes
-- **Bonus**: Have the correct color scheme chosen for them based on their computer preferences. _Hint_: Research `prefers-color-scheme` in CSS.
+- **Bonus**: Have the correct color scheme chosen for them based on their computer preferences.
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](./Github-User-Search-Demo.gif)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- GitHub Repo URL: [https://github.com/jmmarketing/github-user-search-app](https://github.com/jmmarketing/github-user-search-app)
+- Live Site URL: [https://jmmarketing.github.io/github-user-search-app/](https://jmmarketing.github.io/github-user-search-app/)
 
 ## My process
+
+- Review figma files strategize variables, UI states, typography, etc..
+- Build out basic structure with SCSS and MVC in mind.
+- Structure Index.html with elements needed.
+- Create BEM naming conventions & start basic styling
+- Move to states, interactions, etc..
+- Start responisve break points, implement with mixins.
+- Test and tweak
+- Build out single JS file working on features from top down (light/dark --> search --> render).
+- Comment and section JS file for MVC refactor down the line.
+- Test and tweak.
+- Move to refactor to MVC.
+- Break it, obviously.
+- Once working, review requirements, update/fix where needed.
+- Test, test, find ways to break it and fix again.
+- Deploy
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- SCSS (Responsive Mixins)
+- MVC
+- [Parcel Bundler](https://parceljs.org/)
+- Vanilla JS
+- SVG Media
+- Some ☕☕
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This was a great learning project. Starting, then taking 5-6weeks away from it, and coming back was a fun project in itself. From a feature stand point, there were a couple new challenges, including: - Implementing a light/dark toggle - Detecting a users preferred scheme setting - SVG Manipulation techniques
 
 To see how you can add code snippets, see below:
 
 ```html
 <h1>Some HTML code I'm proud of</h1>
 ```
+
 ```css
 .proud-of-this-css {
   color: papayawhip;
 }
 ```
+
 ```js
 const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+  console.log("🎉");
+};
 ```
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
@@ -102,11 +107,9 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Website - [Jeffrey McLean](https://jeffreymclean.com)
+- Frontend Mentor - [JMMarketing](https://www.frontendmentor.io/profile/jmmarketing)
+- Twitter - [@jeffe_mclean](https://www.twitter.com/jeffe_mclean)
 
 ## Acknowledgments
 

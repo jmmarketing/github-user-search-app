@@ -4,7 +4,7 @@ class infobarView {
 
   _state = {
     mode: "light",
-    switchTo: "light",
+    switchTo: "dark",
   };
 
   addHandlerToggle(handlerFunction) {
@@ -41,17 +41,18 @@ class infobarView {
   }
 
   changeTheme() {
-    if (!this._bodyElement.dataset.theme) {
+    const isLight = !this._bodyElement.dataset.theme;
+
+    if (isLight) {
       this._bodyElement.dataset.theme = "dark";
-      this._modeToggle.dataset.theme = "dark";
-      this._state.mode = "dark";
-      this._state.switchTo = "light";
+      // this._modeToggle.dataset.theme = "dark";
     } else {
       delete this._bodyElement.dataset.theme;
       delete this._modeToggle.dataset.theme;
-      this._state.mode = "light";
-      this._state.switchTo = "dark";
     }
+
+    this._state.mode = isLight ? "dark" : "light";
+    this._state.switchTo = isLight ? "light" : "dark";
 
     this._updateToggleElement();
   }
