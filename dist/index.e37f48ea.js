@@ -610,6 +610,7 @@ const controlUserSearch = async function() {
     }
 };
 function init() {
+    (0, _infobarViewJsDefault.default).checkUserPreference();
     (0, _infobarViewJsDefault.default).addHandlerToggle(controlThemeToggle);
     (0, _searchbarViewJsDefault.default).addHandlerGetInput(controlUserSearch);
 }
@@ -724,6 +725,9 @@ class infobarView {
     `;
         this._modeToggle.innerHTML = "";
         this._modeToggle.insertAdjacentHTML("afterbegin", html);
+    }
+    checkUserPreference() {
+        if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) this.changeTheme();
     }
     changeTheme() {
         if (!this._bodyElement.dataset.theme) {

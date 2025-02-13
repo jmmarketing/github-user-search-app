@@ -25,6 +25,7 @@ const controlUserSearch = async function () {
 };
 
 function init() {
+  infobarView.checkUserPreference();
   infobarView.addHandlerToggle(controlThemeToggle);
   searchbarView.addHandlerGetInput(controlUserSearch);
 }

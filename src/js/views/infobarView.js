@@ -31,6 +31,15 @@ class infobarView {
     this._modeToggle.insertAdjacentHTML("afterbegin", html);
   }
 
+  checkUserPreference() {
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      this.changeTheme();
+    }
+  }
+
   changeTheme() {
     if (!this._bodyElement.dataset.theme) {
       this._bodyElement.dataset.theme = "dark";
