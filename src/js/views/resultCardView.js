@@ -25,7 +25,7 @@ class resultCardView {
   }
 
   _compileAvatar(data) {
-    return `<img src="${data["avatar_url"]}" class="result-card__avatar" />`;
+    return `<img src="${data["avatar_url"]}" class="result-card__avatar" alt="User Avatar"/>`;
   }
 
   _compileTitle(data) {
