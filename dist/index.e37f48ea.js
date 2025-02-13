@@ -6362,7 +6362,6 @@ class infobarView {
         }
         this._state.mode = isLight ? "dark" : "light";
         this._state.switchTo = isLight ? "light" : "dark";
-        console.log(this._state);
         this._updateToggleElement();
     }
 }

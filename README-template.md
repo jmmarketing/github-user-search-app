@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./Github-User-Search-Demo.gif)
+![](./preview.gif)
 
 ### Links
 
