@@ -77,10 +77,6 @@ This was a great learning project. Starting, then taking 5-6weeks away from it, 
 
 For the ligh/dark toggle I used :root variables with a data-theme attribute to "switch" them:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
 ```css
 :root {
   --component-background: #fefefe;
@@ -135,9 +131,8 @@ For the ligh/dark toggle I used :root variables with a data-theme attribute to "
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+More practice. Different scenarios, requirements, features. Going to keep pounding out
+practice projects, then move into backend, and a framework.
 
 ## Author
 
