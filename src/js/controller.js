@@ -3,7 +3,7 @@ import infobarView from "./views/infobarView.js";
 import searchbarView from "./views/searchbarView.js";
 import resultCardView from "./views/resultCardView.js";
 
-import "core-js/stable";
+import "core-js";
 import "regenerator-runtime/runtime";
 
 // ##### FUNCTIONS ###########
